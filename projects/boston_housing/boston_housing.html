@@ -13757,7 +13757,7 @@ With the maximum depth increase, the gap between training score and testing scor
 added:</p>
 <ol>
 <li>How does the grid search test parameters? All at once? One at a time? Each possible combination (the outer or Cartesian product of the matrix) all at once? One at a time?<br>
-The Grid Search test all the possible combinations of the pamrameters all at once. (It could be run one by one or parallelly, depends on <code>n_jobs</code> setting.)</li>
+The Grid Search test all the possible combinations of the pamrameters one by one. (Setting  <code>n_jobs</code> and other implementations can allow the Grid Search to run in parallel, but the general idea is to run all the combinations one-by-one.)</li>
 <li>Is this process exhaustive?<br>
 Yes, it searches every single combination of the paramters (Cartesion product), therefore it is exhaustive search.</li>
 <li>How does the grid search know which parameters are 'best'? (briefly mention the scorer function)<br>
